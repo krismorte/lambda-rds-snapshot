@@ -26,7 +26,7 @@ module.exports.main = async (event) => {
               var copyDate = dateFunc.minusDaysFromToday(daysBefore);
               var snapshotDate = dateFunc.removeTimeFromDate(snap.SnapshotCreateTime);
               if (copyDate == snapshotDate) {
-                  var copy = await rdsFuncOtherRegion.copyClusterSnapshot(snap.DBClusterSnapshotArn,'us-east-1')
+                  var copy = await rdsFuncOtherRegion.copyClusterSnapshot(snap.DBClusterSnapshotArn,process.env.mainRegion)
                   console.log(copy+" Rds cluster snapshot cloned")
               }
           })
@@ -49,7 +49,7 @@ module.exports.main = async (event) => {
           var copyDate = dateFunc.minusDaysFromToday(daysBefore);
           var snapshotDate = dateFunc.removeTimeFromDate(snap.SnapshotCreateTime);
           if (copyDate == snapshotDate) {
-              var copy = await rdsFuncOtherRegion.copyInstanceSnapshot(snap.DBSnapshotArn,'us-east-1')
+              var copy = await rdsFuncOtherRegion.copyInstanceSnapshot(snap.DBSnapshotArn,process.env.mainRegion)
               console.log(copy+" Rds instance snapshot cloned")
           }
         })

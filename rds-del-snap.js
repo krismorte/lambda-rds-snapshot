@@ -49,4 +49,3 @@ module.exports.main = async (event) => {
   
     return { message: 'RDS Snapshots successfully cloned!', event };
   }
-  main()
