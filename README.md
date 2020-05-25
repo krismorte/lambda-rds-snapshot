@@ -14,6 +14,12 @@ This is a Backup/Disaster recovery strategy to work with AWS RDS instances
 
 * Deploy na AWS
 
+Replace you aws local profile on this line on serverless.yml
+
+`profile: <YOUR-AWS-PROFILE>`
+
+right below you will see the `environment` tag replace all your configuration and you can deploy your first version
+
 `sls deploy`
 
 ## RDS Snapshot Retention

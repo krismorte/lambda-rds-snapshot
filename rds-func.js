@@ -155,60 +155,6 @@ class RDSFunc{
 }
 
 
-// var cred = new AWS.Credentials("AKIATQI2KOSVANINUSPV", "4LvEEdtxmciD7TWl9Szikqu/2oIVlkgM5LFjY9xr",null);
-  
-//   AWS.config.update({
-//     region: 'us-east-1',
-//     credentials: cred
-//   })
-
-//   var rds = new AWS.RDS();
-
-
-
-
-
-// function describeSnapshots(instance){
-  
-
-
-//   const params = getSearhParams(instance);
-
-// }
-
-// function getRdsSnapshots(data){
-
-//     var copyDate = dateFunc.minusDaysFromToday(10);
-
-//    // var snap = data.DBClusterSnapshots.find((snapshot) => {
-//     var snap = data.DBSnapshots.find((snapshot) => {
-//         var snapshotDate = dateFunc.removeTimeFromDate(snapshot.SnapshotCreateTime);
-  
-//         //if (copyDate == snapshotDate) {
-//           console.log(snapshot.DBSnapshotIdentifier  )
-//           return snapshot.DBClusterSnapshotIdentifier  
-//         //}
-//       })
-
-//       return snap;
-// }
-
-// function getSearhParams(instance){
-//   if(instance.cluster){
-//     return {
-//       DBClusterIdentifier: instance.name,
-//         SnapshotType: "automated",
-//         MaxRecords: 50
-//       }
-//   }else{
-//     return {
-//       DBInstanceIdentifier: instance.name,
-//         SnapshotType: "automated",
-//         MaxRecords: 50
-//       }
-//   }  
-// }
-
 module.exports = {
   RDSFunc
 }

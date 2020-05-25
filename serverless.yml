@@ -5,7 +5,7 @@ provider:
   name: aws
   runtime: nodejs10.x
   region: us-east-2
-  profile: periscope-stage
+  profile: <YOUR-AWS-PROFILE>
   iamManagedPolicies:
     - "arn:aws:iam::aws:policy/AmazonRDSFullAccess"
   environment:
