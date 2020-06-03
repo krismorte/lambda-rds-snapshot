@@ -1,10 +1,10 @@
-service: rds-snapshot-clone # NOTE: update this with your service name
+service: rds-snapshot- # NOTE: update this with your service name
 
 
 provider:
   name: aws
   runtime: nodejs10.x
-  region: us-east-2
+  region: us-west-2
   profile: <YOUR-AWS-PROFILE>
   iamManagedPolicies:
     - "arn:aws:iam::aws:policy/AmazonRDSFullAccess"
@@ -23,7 +23,7 @@ package:
     - .gitignore
     - .vscode
     - node_modules
-    - bitbucket-pipelines.yml
+    - __test__
 
 functions:
   manual-backup:

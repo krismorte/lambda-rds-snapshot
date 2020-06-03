@@ -14,7 +14,8 @@
   "license": "ISC",
   "homepage": "https://bitbucket.org/beblue/lambda-rds-snapshot#readme",
   "dependencies": {
-    "aws-sdk": "^2.493.0"
+    "aws-sdk": "^2.493.0",
+    "dotenv": "^8.2.0"
   },
   "devDependencies": {
     "jest": "^24.9.0",
